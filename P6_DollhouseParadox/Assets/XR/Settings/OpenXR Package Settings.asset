@@ -341,6 +341,7 @@ MonoBehaviour:
   - {fileID: -6291621248571046803}
   - {fileID: -3904602817106205269}
   - {fileID: 7066771315499554325}
+  - {fileID: 7476870766047667484}
   - {fileID: 2827374658693026525}
   - {fileID: 4253143718047672255}
   - {fileID: 4880382720280967810}
@@ -432,3 +433,33 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+--- !u!114 &7476870766047667484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f647cc0545697264a9878224faada6d5, type: 3}
+  m_Name: MetaQuestFeature Android
+  m_EditorClassIdentifier: 
+  m_enabled: 0
+  nameUi: Meta Quest Support
+  version: 1.0.0
+  featureIdInternal: com.unity.openxr.feature.metaquest
+  openxrExtensionStrings: XR_OCULUS_android_initialize_loader
+  company: Unity
+  priority: 0
+  required: 0
+  targetDevices:
+  - visibleName: Quest
+    manifestName: quest
+    enabled: 1
+  - visibleName: Quest 2
+    manifestName: quest2
+    enabled: 1
+  - visibleName: Quest Pro
+    manifestName: cambria
+    enabled: 1
