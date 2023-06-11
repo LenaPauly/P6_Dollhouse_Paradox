@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Jane/Scenes/VR Testing Scene.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
