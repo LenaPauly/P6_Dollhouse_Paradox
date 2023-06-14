@@ -1,4 +1,3 @@
-//NOTE: Undefine this if you need to move the plane at runtime
 //#define PRECALC_PLANE
 
 using System.Collections;
@@ -77,7 +76,7 @@ namespace Apt.Unity.Projection
                 viewDir = eyePos + va + vb + vc + vd;
 
                 // Distance from eye to projection screen plane
-                float d = Vector3.Dot(va, vn) + 7f; // Adjusted near clipping plane value due to our needs
+                float d = -Vector3.Dot(va, vn); // Adjusted near clipping plane value due to our needs
                 if (ClampNearPlane)
                     cam.nearClipPlane = d;
                 n = cam.nearClipPlane;
@@ -92,13 +91,12 @@ namespace Apt.Unity.Projection
 
                 // Translation to eye position
                 Matrix4x4 T = Matrix4x4.Translate(-eyePos);
-                //inverse the result because we are in unity which is left handed
+                
                 Matrix4x4 R = Matrix4x4.Rotate(Quaternion.Inverse(transform.rotation) * ProjectionScreen.transform.rotation);
-                cam.worldToCameraMatrix = M * R * T;
+                cam.worldToCameraMatrix = T * R * M;
 
                 cam.projectionMatrix = P;
             }
         }
-
     }
 }
