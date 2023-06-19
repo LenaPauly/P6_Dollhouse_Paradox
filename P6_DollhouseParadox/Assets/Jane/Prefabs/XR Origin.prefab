@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 5691290336601421425}
   - component: {fileID: 5691290336601421388}
   - component: {fileID: 5691290336601421391}
-  - component: {fileID: 5691290336601421389}
+  - component: {fileID: 7493538245353706004}
   m_Layer: 6
   m_Name: XR Origin
   m_TagString: Untagged
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!143 &5691290336601421389
+--- !u!143 &7493538245353706004
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -670,13 +670,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.36144
+  m_Radius: 0.1
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.76072, z: 0}
 --- !u!1 &5691290336811002657
 GameObject:
   m_ObjectHideFlags: 0
