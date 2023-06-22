@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.srcnalt.openai-unity": {
+      "version": "https://github.com/srcnalt/OpenAI-Unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "8d6d57d5aeddd59c665515a11584eedac7b0953c"
+    },
     "com.unity.collab-proxy": {
       "version": "2.0.1",
       "depth": 0,
@@ -71,6 +80,13 @@
     },
     "com.unity.mathematics": {
       "version": "1.2.6",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
