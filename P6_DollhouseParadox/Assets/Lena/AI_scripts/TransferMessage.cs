@@ -13,14 +13,14 @@ public class TransferMessage : MonoBehaviour
         
     }
 
-    void SendString(string message)
-    {
-        photonView.RPC("ReceiveString", RpcTarget.Others, message);  //remote reciever call... everyone call the function and rpc.target all other players should do this. message is string(hand over with function)
-    }
-    [PunRPC]
-    private void ReceiveString(string receivedString)
-    {
-        RecordingManager.saveString(receivedString);
-        Debug.Log("Received string: " + receivedString);
-    }
+  //  void SendString(string message)
+  // {
+  //      photonView.RPC("ReceiveString", RpcTarget.Others, message);  //remote reciever call... everyone call the function and rpc.target all other players should do this. message is string(hand over with function)
+  //  }
+  //  [PunRPC]
+  //  private void ReceiveString(string receivedString)
+  //  {
+  //      RecordingManager.saveString(receivedString);
+  //      Debug.Log("Received string: " + receivedString);
+  //  }
 }
