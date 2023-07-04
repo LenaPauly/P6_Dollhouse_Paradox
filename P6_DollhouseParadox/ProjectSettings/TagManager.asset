@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Amulette
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Interactable
   - Door
   - NonInteractable
-  - 
+  - Trigger
   - 
   - 
   - 
