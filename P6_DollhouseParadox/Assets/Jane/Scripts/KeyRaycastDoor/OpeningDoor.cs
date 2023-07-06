@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class OpeningDoor : MonoBehaviour
 {
+
+  
+
     [SerializeField] private Animator myAnimationController;
     private void OnTriggerEnter(Collider other)
     {
@@ -11,6 +14,9 @@ public class OpeningDoor : MonoBehaviour
         {
             myAnimationController.SetBool("isOpen", true);
         }
+
+       
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -20,4 +26,5 @@ public class OpeningDoor : MonoBehaviour
             myAnimationController.SetBool("isOpen", false);
         }
     }
+
 }
