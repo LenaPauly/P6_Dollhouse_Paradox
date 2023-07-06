@@ -1,5 +1,3 @@
-//#define PRECALC_PLANE
-
 using System.Collections;
 using UnityEngine;
 
@@ -9,18 +7,29 @@ namespace Apt.Unity.Projection
     [RequireComponent(typeof(Camera))]
     public class ProjectionPlaneCamera : MonoBehaviour
     {
+
+        //Code based on https://csc.lsu.edu/~kooima/pdfs/gen-perspective.pdf
+        //and https://forum.unity.com/threads/vr-cave-projection.76051/
+
         [Header("Projection plane")]
         public ProjectionPlane ProjectionScreen;
         public bool ClampNearPlane = true;
         [Header("Helpers")]
         public bool DrawGizmos = true;
 
-        private Camera cam;
+
         private Vector3 eyePos;
+        //From eye to projection screen corners
         private float n, f;
-        private Vector3 va, vb, vc, vd;
-        private float l, r, b, t;
-        private Vector3 viewDir;
+
+        Vector3 va, vb, vc, vd;
+
+        //Extents of perpendicular projection
+        float l, r, b, t;
+
+        Vector3 viewDir;
+
+        private Camera cam;
 
         private void Awake()
         {
@@ -67,7 +76,7 @@ namespace Apt.Unity.Projection
 
                 eyePos = transform.position;
 
-                // From eye to projection screen corners
+                //From eye to projection screen corners
                 va = pa - eyePos;
                 vb = pb - eyePos;
                 vc = pc - eyePos;
@@ -75,8 +84,8 @@ namespace Apt.Unity.Projection
 
                 viewDir = eyePos + va + vb + vc + vd;
 
-                // Distance from eye to projection screen plane
-                float d = -Vector3.Dot(va, vn); // Adjusted near clipping plane value due to our needs
+                //distance from eye to projection screen plane
+                float d = -Vector3.Dot(va, vn);
                 if (ClampNearPlane)
                     cam.nearClipPlane = d;
                 n = cam.nearClipPlane;
@@ -89,11 +98,11 @@ namespace Apt.Unity.Projection
                 t = Vector3.Dot(vu, vc) * nearOverDist;
                 Matrix4x4 P = Matrix4x4.Frustum(l, r, b, t, n, f);
 
-                // Translation to eye position
+                //Translation to eye position
                 Matrix4x4 T = Matrix4x4.Translate(-eyePos);
-                
+
                 Matrix4x4 R = Matrix4x4.Rotate(Quaternion.Inverse(transform.rotation) * ProjectionScreen.transform.rotation);
-                cam.worldToCameraMatrix = T * R * M;
+                cam.worldToCameraMatrix = M * R * T;
 
                 cam.projectionMatrix = P;
             }
