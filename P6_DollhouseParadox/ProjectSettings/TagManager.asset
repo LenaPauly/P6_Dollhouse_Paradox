@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Key
   - TriggerBox
+  - Hand
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Door
   - NonInteractable
   - Trigger
-  - 
+  - PostProcessing
   - 
   - 
   - 
