@@ -6,10 +6,12 @@ public class DestroyObject : MonoBehaviour
 {
 
     public GameObject amuletteNoLightObject;
+    public GameObject FireObject;
 
     private void Start()
     {
         amuletteNoLightObject.SetActive(false);
+        FireObject.SetActive(true);
     }
     public void OnTriggerEnter(Collider collision)
     {
@@ -17,6 +19,7 @@ public class DestroyObject : MonoBehaviour
         {
             Destroy(collision.gameObject);
             amuletteNoLightObject.SetActive(true);
+            FireObject.SetActive(false);
 
         }
     }
