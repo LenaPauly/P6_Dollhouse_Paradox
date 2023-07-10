@@ -10,12 +10,15 @@ public class TransferMessage : MonoBehaviourPun
 
     private void Start()
     {
+       
         SpeechManager.OnNewRecognizedText += SendStringToOtherPlayers;  // Subscribe to the SpeechManager to receive the recorded text
     }
 
     // When you receive a new recorded text, send it to the other players immediately via the photonView component.
     public void SendStringToOtherPlayers(string message)
     {
+
+        Debug.Log("Text = " + message);
         photonView.RPC("ReceiveString", RpcTarget.Others, message); // Calls the "ReceiveString" function only on other players and hands over "message".
         // Note: you can hand over more variables if needed. Just add another set of ", *variable here*" to the brackets. Ofc the function you defined
         // has to also take these kinds of variables (like mine takes a string only, so I only have ", *myString*" and nothing more.)
