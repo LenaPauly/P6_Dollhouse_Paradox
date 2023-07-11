@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
 using OpenAI;
-using Palmmedia.ReportGenerator.Core;
+//using Palmmedia.ReportGenerator.Core;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI.Table;
