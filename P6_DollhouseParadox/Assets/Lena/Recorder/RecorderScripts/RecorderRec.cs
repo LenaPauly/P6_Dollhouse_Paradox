@@ -13,16 +13,16 @@ public class RecorderRec : MonoBehaviour
     void Start()
     {
         triggerCollider = GetComponent<Collider>();
-        
-        
+       // SpeechManager.OnMessageReadComplete += HandleMessageReadComplete;
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (isTriggerEnabled && triggerCollider != other && triggerCollider != null)
         {
-           // StartCoroutine(recordingRoutine());
-            SpeechManager.StartSpeechRecording();
+            StartCoroutine(recordingRoutine());
+            //SpeechManager.StartSpeechRecording();
             triggerCollider.enabled = false;
             recorderPlay.EnableTrigger();
         }

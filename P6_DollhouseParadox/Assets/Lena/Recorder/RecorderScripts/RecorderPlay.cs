@@ -17,7 +17,7 @@ public class RecorderPlay : MonoBehaviour
         if (triggerCollider != other && triggerCollider != null)
         {
             // StartCoroutine(recordingRoutine());
-            SpeechManager.StartSpeechRecording();
+            //SpeechManager.StartSpeechRecording();
             triggerCollider.enabled = false;
             recorderRec.EnableTrigger();
         }
