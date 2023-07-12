@@ -16,17 +16,17 @@
 
 using System;
 using System.Collections.Generic;
-using System.Net;
+//using System.Net;
 using System.Threading.Tasks;
 using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
 using OpenAI;
 //using Palmmedia.ReportGenerator.Core;
-using Unity.VisualScripting;
+//using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI.Table;
-using UnityEngine.ProBuilder.Shapes;
-using UnityEngine.Rendering.LookDev;
+//using static UnityEngine.Rendering.DebugUI.Table;
+//using UnityEngine.ProBuilder.Shapes;
+//using UnityEngine.Rendering.LookDev;
 
 
 public static class SpeechManager
@@ -58,6 +58,8 @@ public static class SpeechManager
     private static List<ChatMessage> _messages = new List<ChatMessage>();
     private static string _prompt = " " +
         " ";
+
+    public static event Action<string> OnMessageReadComplete; //by LENA
 
     #region RecordingSpeech
 
@@ -161,6 +163,9 @@ public static class SpeechManager
 
             _returnText = returnMessage.Content.ToString();
             Debug.Log(_returnText);
+            _returnText = returnMessage.Content.ToString(); //by LENA
+            OnMessageReadComplete?.Invoke(_returnText); //by LENA
+
         }
         else
         {
