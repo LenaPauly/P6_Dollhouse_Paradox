@@ -40874,6 +40874,7 @@ GameObject:
   - component: {fileID: 1973350287}
   - component: {fileID: 1973350289}
   - component: {fileID: 1973350288}
+  - component: {fileID: 1973350290}
   m_Layer: 0
   m_Name: AIDoll2Trigger
   m_TagString: Untagged
@@ -40966,7 +40967,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973350281}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5afbfd79f0675a54eb14e9513420bde5, type: 3}
   m_Name: 
@@ -40990,7 +40991,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973350281}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50a7e1d89a439d442995efe0ed103551, type: 3}
   m_Name: 
@@ -41146,6 +41147,49 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1973350290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973350281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0186d697740cc46a878bea1d232ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerToUse: 64
+  OnStartedRecording:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1973350290}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopCoroutine
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFinishedRecording:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1973350290}
+        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
+        m_MethodName: SendMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1986230214
 PrefabInstance:
   m_ObjectHideFlags: 0
