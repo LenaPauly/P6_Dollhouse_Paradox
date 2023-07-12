@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ARMCHAIR
+  m_Name: armchair
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
   - _METALLICGLOSSMAP
@@ -23,7 +23,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 78019552bb1eb9745bc52cc46851c979, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5024e6ba96d64c84c80bae3a0e976c94, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -43,11 +43,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 17d5ac2f59567e04f956940786afb66e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 33b6b3596d06c5942a8f0007da3b7e60, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: ce703c662b001514f8db9e1bc60345ca, type: 3}
+        m_Texture: {fileID: 2800000, guid: c3e34efeab89d3b418a12abc9fe19ed5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -64,7 +64,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.212
+    - _GlossMapScale: 0.339
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0

@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:P6_DollhouseParadox/Assets/JJ_InteriorDoorPack_V1/Textures/Knobs/intDoor_knob01_mat_doorKnob_Normal.png.meta
-<<<<<<< HEAD
 guid: 5024e6ba96d64c84c80bae3a0e976c94
-=======
-guid: fa301cd4151df8f44849cf05ef48260b
->>>>>>> main
-=======
-guid: 78019552bb1eb9745bc52cc46851c979
->>>>>>> EnvironmentDesign:P6_DollhouseParadox/Assets/Forouzan/Assets/Armchair/Armchair_b_Mat_Normal.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,8 +62,8 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  cookieLightType: 0
+  applyGammaDecoding: 1
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform

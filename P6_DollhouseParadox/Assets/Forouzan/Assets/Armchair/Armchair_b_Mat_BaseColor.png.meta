@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:P6_DollhouseParadox/Assets/JJ_InteriorDoorPack_V1/Textures/Knobs/intDoor_knob01_mat_doorKnob_MetallicSmoothness.png.meta
-<<<<<<< HEAD
 guid: 33b6b3596d06c5942a8f0007da3b7e60
-=======
-guid: 813edbcb431954d419636758979b0a24
->>>>>>> main
-=======
-guid: 17d5ac2f59567e04f956940786afb66e
->>>>>>> EnvironmentDesign:P6_DollhouseParadox/Assets/Forouzan/Assets/Armchair/Armchair_b_Mat_BaseColor.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,15 +62,15 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  cookieLightType: 0
+  applyGammaDecoding: 1
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -90,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
