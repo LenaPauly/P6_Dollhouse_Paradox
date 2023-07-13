@@ -49,18 +49,19 @@ public class SpeechInputTrigger : MonoBehaviour
     {
         if (_speechInputActive && _waitForButtonRoutine == null)
         {
-            if (!_leftHand.isValid && triggerCollider == true)
+            if (!_leftHand.isValid)
                 TryInitializeController();
 
             // Left hand Trigger
             _leftHand.TryGetFeatureValue(CommonUsages.trigger, out float lTriggerPressed);
-            if (lTriggerPressed > 0.3)
+            if (lTriggerPressed > 0.3 && triggerCollider == true)
             {
+                Debug.Log("triggered collider and trigger pressed")
                 _waitForButtonRoutine = StartCoroutine(WaitForSecondButton(InputType.trigger));
                 return;
             }
 
-           /* if (_waitForButtonRoutine == null)
+           /*if (_waitForButtonRoutine == null)
             {
                 // Left hand Grip
                 _leftHand.TryGetFeatureValue(CommonUsages.grip, out float lGripPressed);
@@ -87,6 +88,7 @@ public class SpeechInputTrigger : MonoBehaviour
                 {
                     SpeechManager.StartSpeechRecording();
                     StartCoroutine(WaitForEndButton());
+                    Debug.Log("Starting recording");
                     yield break;
                 }
             }
@@ -97,6 +99,7 @@ public class SpeechInputTrigger : MonoBehaviour
 
                 if (oneButtonActive && otherButtonActive)
                 {
+                    Debug.Log("Starting recording");
                     SpeechManager.StartSpeechRecording();
                     StartCoroutine(WaitForEndButton());
                     yield break;
@@ -113,7 +116,7 @@ public class SpeechInputTrigger : MonoBehaviour
         OnStartedRecording?.Invoke();
         bool oneButtonActive = true;
         bool otherButtonActive = true;
-        _secondsRecorded = 30f;
+        _secondsRecorded = 10f;
         while (oneButtonActive && otherButtonActive)
         {
             OnStartedRecording?.Invoke();
