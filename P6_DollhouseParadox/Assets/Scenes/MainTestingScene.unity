@@ -12911,7 +12911,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -7374733323251553461, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_RightHandSnapTurnAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Right Hand Snap Turn
       m_Type: 0
@@ -27301,7 +27301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1306871501
 Transform:
   m_ObjectHideFlags: 0
@@ -34935,7 +34935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1715736363
 Transform:
   m_ObjectHideFlags: 0
