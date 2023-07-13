@@ -20,6 +20,8 @@ public class DollSpeech : MonoBehaviour
         if (triggerCollider != other)
         {
             StartCoroutine(PlayAudioAndDestroy());
+            Destroy(triggerCollider);
+            Debug.Log("started coroutine, destroyed trigger");
         }
     }
 

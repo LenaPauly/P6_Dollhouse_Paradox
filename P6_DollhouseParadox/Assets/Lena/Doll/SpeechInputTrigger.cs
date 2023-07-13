@@ -61,13 +61,14 @@ public class SpeechInputTrigger : MonoBehaviour
                 return;
             }
 
-           /*if (_waitForButtonRoutine == null)
+           if (_waitForButtonRoutine == null && triggerCollider == true)
             {
+                Debug.Log("second if has been triggered");
                 // Left hand Grip
                 _leftHand.TryGetFeatureValue(CommonUsages.grip, out float lGripPressed);
                 if (lGripPressed > 0.3)
                     _waitForButtonRoutine = StartCoroutine(WaitForSecondButton(InputType.grip));
-            }*/
+            }
 
         }
     }
