@@ -56,7 +56,7 @@ public class SpeechInputTrigger : MonoBehaviour
             _leftHand.TryGetFeatureValue(CommonUsages.trigger, out float lTriggerPressed);
             if (lTriggerPressed > 0.3 && triggerCollider == true)
             {
-                Debug.Log("triggered collider and trigger pressed")
+                Debug.Log("triggered collider and trigger pressed");
                 _waitForButtonRoutine = StartCoroutine(WaitForSecondButton(InputType.trigger));
                 return;
             }
