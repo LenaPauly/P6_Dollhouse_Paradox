@@ -17292,6 +17292,10 @@ PrefabInstance:
       value: doll
       objectReference: {fileID: 0}
     - target: {fileID: 8024496016042283249, guid: f797c80486a606346a9eec71b857dc80, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024496016042283249, guid: f797c80486a606346a9eec71b857dc80, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -24996,6 +25000,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1224741098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8024496016042283249, guid: f797c80486a606346a9eec71b857dc80, type: 3}
+  m_PrefabInstance: {fileID: 803618623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225087296
 GameObject:
   m_ObjectHideFlags: 0
@@ -25948,6 +25957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doll: {fileID: 1046874776}
+  secondDoll: {fileID: 1224741098}
 --- !u!1 &1251906014
 GameObject:
   m_ObjectHideFlags: 0
@@ -40667,7 +40677,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh79718
+  m_Name: pb_Mesh30952
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

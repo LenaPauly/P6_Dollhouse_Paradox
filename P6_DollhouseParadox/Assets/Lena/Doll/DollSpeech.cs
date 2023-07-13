@@ -8,11 +8,13 @@ public class DollSpeech : MonoBehaviour
     [SerializeField] GameObject doll;
     private Collider triggerCollider;
     private AudioSource speaker;
+    public GameObject secondDoll;
 
     private void Start()
     {
         triggerCollider = GetComponent<Collider>();
         speaker = GetComponent<AudioSource>();
+        secondDoll.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,6 +37,7 @@ public class DollSpeech : MonoBehaviour
 
         // Call a function or perform any other desired action
         DestroyObjects();
+        SecondDollActive(); 
 
 
         // Update is called once per frame
@@ -42,6 +45,10 @@ public class DollSpeech : MonoBehaviour
         {
             Destroy(doll);
             Destroy(speaker.gameObject);
+        }
+        void SecondDollActive()
+        {
+            secondDoll.SetActive(true);
         }
     }
 }
